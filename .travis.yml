@@ -11,9 +11,12 @@ before_install:
   - yarn global add lerna
 
 install:
-  - lerna bootstrap --force-local
+  - lerna add codecov --dev
 
 script:
   - commitlint-travis
   - yarn run lint
   - yarn run test
+
+after_success:
+  - codecov
