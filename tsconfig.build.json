@@ -1,0 +1,12 @@
+{
+  "exclude": ["node_modules/**/*.*"],
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "target": "esnext"
+  }
+}

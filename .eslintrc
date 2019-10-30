@@ -1,0 +1,11 @@
+{
+  "extends": ["@vta/eslint-config-typescript"],
+  "rules": {
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["@vta/*"]
+      }
+    ]
+  }
+}

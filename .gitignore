@@ -1,0 +1,6 @@
+**/node_modules/
+**/dist/
+**/coverage/
+**/.cache/
+!/packages/**/__snapshots__/dist/
+*-error.log

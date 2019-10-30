@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.build.json",
+  "inclue": ["packages/**/*.ts"],
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@vta/*": ["*/src"]
+    }
+  }
+}

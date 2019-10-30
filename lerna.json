@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--silent", "--force"]
+    },
+    "publish": {
+      "ignoreChanges": ["**/__tests__/", "*.*ignore"],
+      "message": "refactor(release): release %v"
+    }
+  }
+}

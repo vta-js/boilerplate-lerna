@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 12.13.0
+
+branches:
+  except:
+    - dev
+    - /^dev-.+$/
+
+before_install:
+  - yarn global add lerna
+
+install:
+  - lerna bootstrap --force-local
+
+script:
+  - commitlint-travis
+  - yarn run lint
+  - yarn run test
