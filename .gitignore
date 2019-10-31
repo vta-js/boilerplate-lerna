@@ -4,3 +4,5 @@
 **/.cache/
 !/packages/**/__snapshots__/dist/
 *-error.log
+packages/test-*/
+packages/delay/LICENSE

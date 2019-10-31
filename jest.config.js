@@ -1,8 +1,9 @@
 module.exports = {
-  preset: "ts-jest/presets/js-with-ts",
+  preset: "ts-jest",
   testMatch: [
-    "<rootDir>/packages/**/__tests__/**/*.(ts)",
-    "<rootDir>/packages/**/*.(spec|test).(ts)",
+    "<rootDir>/__tests__/**/*.(js|ts)",
+    "<rootDir>/packages/**/__tests__/**/*.(js|ts)",
+    "<rootDir>/packages/**/*.(spec|test).(js|ts)",
   ],
   testPathIgnorePatterns: ["/node_modules/", "/__tests__/(.+/)?data/", "/__tests__/(.+/)?utils/"],
   collectCoverage: true,
