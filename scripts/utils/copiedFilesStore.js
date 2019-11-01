@@ -8,7 +8,7 @@ const savePath = path.resolve(
   cwd,
   "./.cache/80a2e8bd-db98-4190-afbe-0509f8e06f89/copied-files.json",
 );
-const needCopiedFile = [];
+const needCopiedFiles = [];
 
 function fileExists(dest) {
   return new Promise(resolve => {
@@ -16,7 +16,7 @@ function fileExists(dest) {
   });
 }
 
-function copyFiles(files, copiedFile) {
+function copyFiles(files, copiedFiles) {
   if (files.length === 0) return Promise.resolve();
   const { src, dest } = files[0];
   return fileExists(dest)
@@ -42,33 +42,33 @@ function copyFiles(files, copiedFile) {
       return { src, dest, copied: false };
     })
     .then(file => {
-      copiedFile.push(file);
-      return copyFiles(files.slice(1), copiedFile);
+      copiedFiles.push(file);
+      return copyFiles(files.slice(1), copiedFiles);
     });
 }
 
 module.exports = {
   add(src, dest) {
-    needCopiedFile.push({ src, dest });
+    needCopiedFiles.push({ src, dest });
   },
   remove(dest) {
-    for (let i = 0, len = needCopiedFile.length; i < len; i += 1) {
-      if (needCopiedFile.dest === dest) {
-        needCopiedFile.splice(i, 1);
+    for (let i = 0, len = needCopiedFiles.length; i < len; i += 1) {
+      if (needCopiedFiles.dest === dest) {
+        needCopiedFiles.splice(i, 1);
         break;
       }
     }
   },
   commit() {
-    const copiedFile = [];
-    return copyFiles(needCopiedFile, copiedFile)
+    const copiedFiles = [];
+    return copyFiles(needCopiedFiles, copiedFiles)
       .then(
         () => {
           return fse.ensureFile(savePath).then(() =>
             fse.writeFile(
               savePath,
               JSON.stringify(
-                copiedFile.filter(({ copied }) => copied).map(({ dest }) => dest),
+                copiedFiles.filter(({ copied }) => copied).map(({ dest }) => dest),
                 null,
                 2,
               ),
@@ -80,14 +80,14 @@ module.exports = {
         },
         err => {
           return Promise.all(
-            copiedFile.filter(({ copied }) => copied).map(({ dest }) => fse.remove(dest)),
+            copiedFiles.filter(({ copied }) => copied).map(({ dest }) => fse.remove(dest)),
           ).then(() => {
             throw err;
           });
         },
       )
       .then(() => {
-        needCopiedFile.length = 0;
+        needCopiedFiles.length = 0;
       });
   },
   wipe() {
