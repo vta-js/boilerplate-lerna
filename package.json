@@ -32,7 +32,7 @@
     "@commitlint/travis-cli": "^8.2.0",
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.0",
-    "@types/node": "^12.12.0",
+    "@types/node": "^12.12.5",
     "@vta/eslint-config-typescript": "^1.0.0",
     "@vta/format-npm-yarn-lock": "^1.0.0",
     "eslint": "^6.6.0",
