@@ -1,6 +1,6 @@
 const path = require("path");
 const fse = require("fs-extra");
-const { default: chalk } = require("chalk");
+const chalk = require("chalk");
 
 const cwd = process.cwd();
 
