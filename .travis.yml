@@ -6,6 +6,7 @@ branches:
   except:
     - dev
     - /^dev-.+$/
+    - /^dependabot.+$/
 
 before_install:
   - yarn global add lerna
