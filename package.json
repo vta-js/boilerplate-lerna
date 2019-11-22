@@ -35,7 +35,7 @@
     "@types/node": "^12.12.0",
     "@vta/eslint-config-typescript": "^1.0.0",
     "@vta/format-npm-yarn-lock": "^1.0.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.7.0",
     "husky": "^3.0.0",
     "lint-staged": "^9.4.0",
     "jest": "^24.8.0",
