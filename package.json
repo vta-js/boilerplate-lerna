@@ -36,7 +36,7 @@
     "@vta/eslint-config-typescript": "^1.0.0",
     "@vta/format-npm-yarn-lock": "^1.0.0",
     "eslint": "^6.6.0",
-    "husky": "^3.0.0",
+    "husky": "^4.0.6",
     "lint-staged": "^9.4.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.0",
