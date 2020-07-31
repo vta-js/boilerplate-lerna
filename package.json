@@ -31,7 +31,7 @@
     "@commitlint/config-angular": "^8.2.0",
     "@commitlint/travis-cli": "^8.2.0",
     "@types/fs-extra": "^8.0.0",
-    "@types/jest": "^24.0.0",
+    "@types/jest": "^26.0.8",
     "@types/node": "^12.12.0",
     "@vta/eslint-config-typescript": "^1.0.0",
     "@vta/format-npm-yarn-lock": "^1.0.0",
