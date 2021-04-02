@@ -155,17 +155,17 @@
     resolve-from "5.0.0"
     resolve-global "1.0.0"
 
-"@commitlint/config-angular-type-enum@^8.2.0":
-  version "8.2.0"
-  resolved "https://registry.npm.taobao.org/@commitlint/config-angular-type-enum/download/@commitlint/config-angular-type-enum-8.2.0.tgz#ab7b48501deb0ceab2ec3b356a8e1406448eb00d"
-  integrity sha1-q3tIUB3rDOqy7Ds1ao4UBkSOsA0=
+"@commitlint/config-angular-type-enum@^12.1.1":
+  version "12.1.1"
+  resolved "https://registry.npm.taobao.org/@commitlint/config-angular-type-enum/download/@commitlint/config-angular-type-enum-12.1.1.tgz#a8cc008ad1dabc8cf86334d6343f0d9d87ccf443"
+  integrity sha1-qMwAitHavIz4YzTWND8NnYfM9EM=
 
-"@commitlint/config-angular@^8.2.0":
-  version "8.2.0"
-  resolved "https://registry.npm.taobao.org/@commitlint/config-angular/download/@commitlint/config-angular-8.2.0.tgz#826cf9d665f5742571988eb388b1c1a1a542c96b"
-  integrity sha1-gmz51mX1dCVxmI6ziLHBoaVCyWs=
+"@commitlint/config-angular@^12.1.1":
+  version "12.1.1"
+  resolved "https://registry.npm.taobao.org/@commitlint/config-angular/download/@commitlint/config-angular-12.1.1.tgz#6bdc1da4cfd0336285277dc786cf1202f6a92321"
+  integrity sha1-a9wdpM/QM2KFJ33Hhs8SAvapIyE=
   dependencies:
-    "@commitlint/config-angular-type-enum" "^8.2.0"
+    "@commitlint/config-angular-type-enum" "^12.1.1"
 
 "@commitlint/ensure@^8.2.0":
   version "8.2.0"
